@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "A simple and easy to use log-to-file module.",
   "main": "Logger.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arm4design/arm4log.git"
   },
   "keywords": [
     "logger",
@@ -16,5 +23,9 @@
     "file"
   ],
   "author": "Armando Soriano <asoriano.dev@gmail.com>",
-  "license": "GNU 3.0"
+  "license": "GNU 3.0",
+  "bugs": {
+    "url": "https://github.com/arm4design/arm4log/issues"
+  },
+  "homepage": "https://github.com/arm4design/arm4log#readme"
 }
