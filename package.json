@@ -1,0 +1,20 @@
+{
+  "name": "arm4log",
+  "version": "1.0.0",
+  "description": "A simple and easy to use log-to-file module.",
+  "main": "Logger.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "keywords": [
+    "logger",
+    "log",
+    "nodejs",
+    "easy",
+    "simple",
+    "log",
+    "file"
+  ],
+  "author": "Armando Soriano <asoriano.dev@gmail.com>",
+  "license": "GNU 3.0"
+}
