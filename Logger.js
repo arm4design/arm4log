@@ -3,10 +3,14 @@
  * @classdesc The Logger class to create logger instances
  * @author Armando Soriano <asoriano.dev@gmail.com>
  * @version 1.0.0
- * @param {object} options {
- *                         path {string}, 
- *                         filename {string}
- *                         }
+ * @license GNU 3.0
+ * @param {object} options Options [optional]
+ * @param {string} options.path Desired path to the folder [optional] Default: __dirname
+ * @param {string} options.filename Desired log file filename [optional] Default: log
+ * @property {object} fs NodeJS filesystem module 
+ * @property {string} EOL NodeJS end-of-line value
+ * @property {string} file Full path to log file
+ * @property {string} date The current time in locale basis string to be printed as logging timestamp
  */
 function Logger(options) {
 
@@ -18,40 +22,24 @@ function Logger(options) {
     var filename = options.filename ? options.filename : 'log';
     
 	Object.defineProperties(this, {
-        /**
-         * @member {function} 
-         * @description NodeJS filesystem module 
-         */
 	    fs: {
 	        value : require('fs'),
 	        enumerable : false,
 	        writable : false,
 	        configurable : false
 	    },
-        /**
-         * @member {string}
-         * @description NodeJS end-of-line value
-         */
 	    EOL: {
 	        value : require('os').EOL,
 	        enumerable : false,
 	        writable : false,
 	        configurable : false
 	    },
-        /**
-         * @member {string} 
-         * @description Full path to log file
-         */
 		file : {
 		    value : folder + '/' + filename,
 		    enumerable : true,
 		    writable : false,
 		    configurable : false
 		},
-        /**
-         * @member {string} 
-         * @description The current time in locale basis string to be printed as logging timestamp
-         */
         date: {
             get: function(){
                 return new Date().toLocaleString().split(' ').slice(0, 5).join(' ');
@@ -61,8 +49,8 @@ function Logger(options) {
 
 };
 /**
- * @description Write
- * @param {any} data The data to be written in the log
+ * Writes the passed string to the log file
+ * @param {string} data The data to be written in the log
  */
 Logger.prototype.write = function(data) {
 	this.fs.appendFile(this.file, data, function(err) {

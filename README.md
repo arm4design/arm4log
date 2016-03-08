@@ -1,6 +1,11 @@
 # arm4log
 A simple an easy to use file logging module for NodeJS
 
+[![npm:](https://img.shields.io/npm/v/arm4log.svg)](https://www.npmjs.com/arm4design/arm4log)
+[![github:](https://img.shields.io/github/release/arm4design/arm4log.svg)](https://github.com/arm4design/arm4log)
+[![github:](https://img.shields.io/github/issues/arm4design/arm4log.svg)](https://github.com/arm4design/arm4log/issues)
+[![Build Status](https://img.shields.io/travis/arm4design/arm4log.svg)](https://travis-ci.org/arm4design/arm4log)
+
 ### Install
 ````javascript
 npm install arm4log
@@ -31,3 +36,19 @@ logger.error('The error you want to log');
 logger.data('The data you want to log');
 // [DATA][2016-03-05 00:18:44]: The data you want to log
 ````
+
+##### Full documentation
+Check the jsdoc [here](http://arm4dev.com/jsdoc/arm4log/1.0.0/index.html)
+or create it locally just installing [jsdoc](https://github.com/jsdoc3/jsdoc) and 
+````javascript
+jsdoc --readme ${path-to-readme} --package ${path-to-package.json} ${path-to-cloned-folder}
+````
+
+### Tests
+It uses [mocha](https://github.com/mochajs/mocha) and [chai](https://github.com/chaijs/chai)
+````javascript
+npm test
+````
+
+### License
+[GNU 3.0](https://github.com/arm4design/arm4log/blob/master/LICENSE)
