@@ -51,7 +51,8 @@ describe('Logger', function(){
             });
         });
         after(function(){
-            fs.unlinkSync(logger.file);
+            try { fs.unlinkSync(logger.file); } 
+            catch(e) {}
         });
     });
 });
