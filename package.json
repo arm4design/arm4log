@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/arm4design/arm4log/issues"
   },
-  "homepage": "https://github.com/arm4design/arm4log#readme"
+  "homepage": "https://github.com/arm4design/arm4log#readme",
+  "devDependencies": {
+    "mocha": ">=2.4.5",
+    "chai": ">=3.5.0"
+  }
 }
